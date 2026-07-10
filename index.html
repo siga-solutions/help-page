@@ -9,78 +9,460 @@
   <body>
     <div class="header">
       <h1>Centro de Ayuda</h1>
-      <p>Guía completa para utilizar el sistema SIGA</p>
+      <p>Guía de uso del sistema SIGA — Gestión de activos y reportes BCU</p>
     </div>
 
     <div class="container">
-      <!-- SECCIÓN 1: ASESORES -->
-      <div class="section">
+      <!-- ÍNDICE -->
+      <nav class="toc" aria-label="Índice de contenidos">
+        <h2>Índice de módulos</h2>
+        <div class="toc-grid">
+          <a class="toc-item" href="#navegacion">
+            <img src="images/ayuda.svg" alt="" />
+            1. Navegación e inicio de sesión
+          </a>
+          <a class="toc-item" href="#notificaciones">
+            <img src="images/notificaciones.svg" alt="" />
+            2. Notificaciones
+          </a>
+          <a class="toc-item" href="#clientes">
+            <img src="images/clientes.svg" alt="" />
+            3. Clientes
+          </a>
+          <a class="toc-item" href="#instrumentos">
+            <img src="images/instrumentos.svg" alt="" />
+            4. Instrumentos
+          </a>
+          <a class="toc-item" href="#transacciones">
+            <img src="images/transacciones.svg" alt="" />
+            5. Transacciones
+          </a>
+          <a class="toc-item" href="#perfiles">
+            <img src="images/perfiles.svg" alt="" />
+            6. Perfiles de Riesgo
+          </a>
+          <a class="toc-item" href="#informe">
+            <img src="images/informe.svg" alt="" />
+            7. Informe Anual
+          </a>
+          <a class="toc-item" href="#otros">
+            <img src="images/asesor.svg" alt="" />
+            8. Otros módulos
+          </a>
+        </div>
+      </nav>
+
+      <!-- SECCIÓN 1: NAVEGACIÓN -->
+      <div class="section" id="navegacion">
         <div class="section-header" onclick="toggleSection(this)">
-          <span>1. Asesores</span>
+          <span class="section-header-left">
+            <img src="images/ayuda.svg" alt="" />
+            <span>1. Navegación e inicio de sesión</span>
+          </span>
           <span class="section-icon">▼</span>
         </div>
         <div class="section-content">
+          <p class="section-intro">
+            SIGA es la plataforma de gestión de clientes, instrumentos,
+            transacciones y reportes regulatorios (BCU) de Siga Solutions. Tras
+            autenticarse, el menú lateral permite acceder a cada módulo.
+          </p>
+
           <div class="subsection">
             <div class="subsection-header" onclick="toggleSubsection(this)">
-              <span class="subsection-title">¿Qué es un Asesor?</span>
+              <span class="subsection-title">Inicio de sesión</span>
               <span class="subsection-icon">▼</span>
             </div>
             <div class="subsection-content">
-              <p>
-                Un asesor es un profesional certificado que gestiona las
-                inversiones de los clientes. En el sistema, los asesores tienen
-                acceso a:
-              </p>
-              <ul>
-                <li>Información completa de sus clientes asignados</li>
-                <li>Carteras de inversión bajo su gestión</li>
-                <li>Herramientas de análisis y reportería</li>
-                <li>Funciones de ejecución de transacciones</li>
-              </ul>
+              <ol class="steps">
+                <li>Abra la URL de la aplicación que le haya indicado su administrador.</li>
+                <li>Ingrese su correo electrónico y contraseña.</li>
+                <li>
+                  Si las credenciales son válidas, el sistema lo redirige al
+                  área protegida.
+                </li>
+              </ol>
+              <figure class="screenshot">
+                <img
+                  src="images/00-login.png"
+                  alt="Pantalla de inicio de sesión de SIGA"
+                />
+                <figcaption>Pantalla de inicio de sesión de SIGA.</figcaption>
+              </figure>
+              <div class="highlight-box">
+                <strong>Sesión:</strong> por inactividad prolongada el sistema
+                cierra la sesión automáticamente y lo devuelve a la pantalla de
+                login. Vuelva a autenticarse para continuar.
+              </div>
             </div>
           </div>
 
           <div class="subsection">
             <div class="subsection-header" onclick="toggleSubsection(this)">
-              <span class="subsection-title">Gestión de Asesores</span>
+              <span class="subsection-title">Menú lateral</span>
               <span class="subsection-icon">▼</span>
             </div>
             <div class="subsection-content">
-              <p>Para gestionar asesores en el sistema:</p>
-              <ul>
-                <li>
-                  <strong>Alta de asesor:</strong> Complete el formulario con
-                  datos personales, certificaciones y área de especialización
-                </li>
-                <li>
-                  <strong>Asignación de clientes:</strong> Vincule clientes
-                  existentes al asesor mediante el módulo de asignación
-                </li>
-                <li>
-                  <strong>Permisos:</strong> Configure los niveles de acceso
-                  según el rol del asesor
-                </li>
-                <li>
-                  <strong>Seguimiento:</strong> Monitoree el desempeño mediante
-                  reportes de actividad
-                </li>
-              </ul>
-              <div class="highlight-box">
-                <strong>Nota:</strong> Solo usuarios con rol de administrador
-                pueden dar de alta nuevos asesores.
+              <p>
+                El menú de la izquierda agrupa las funciones principales. Puede
+                expandirlo o colapsarlo con el control del propio panel.
+              </p>
+              <table class="field-table">
+                <thead>
+                  <tr>
+                    <th>Módulo</th>
+                    <th>Función principal</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Notificaciones</td>
+                    <td>
+                      Alertas del sistema (instrumentos incompletos, clientes
+                      desconocidos, etc.)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Clientes</td>
+                    <td>Alta, edición y consulta de clientes y cuentas</td>
+                  </tr>
+                  <tr>
+                    <td>Perfiles de Riesgo</td>
+                    <td>
+                      Composición de carteras vs. rangos de renta fija/variable
+                      y generación de reportes
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Instrumentos</td>
+                    <td>
+                      Clasificación BCU, composición de activos y activación
+                      para reportes
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Transacciones</td>
+                    <td>
+                      Registro BCU, corrección de datos y exportación XML/XLSX
+                      trimestral
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Informe Anual</td>
+                    <td>
+                      Anexos III, V y VII sobre servicios a clientes (según
+                      configuración del entorno)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Ayuda</td>
+                    <td>Esta guía, embebida dentro de la aplicación</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="warning-box">
+                <strong>Nota:</strong> algunos ítems (Asesor, Carteras
+                Individuales, Informe Anual) pueden ocultarse según la
+                configuración del entorno. Si no ve un módulo, consulte a
+                soporte.
               </div>
+            </div>
+          </div>
+
+          <div class="subsection">
+            <div class="subsection-header" onclick="toggleSubsection(this)">
+              <span class="subsection-title">Cerrar sesión</span>
+              <span class="subsection-icon">▼</span>
+            </div>
+            <div class="subsection-content">
+              <p>
+                Use el botón de <strong>Logout</strong> en la parte inferior del
+                menú lateral. El sistema limpia la sesión y regresa a la
+                pantalla de login.
+              </p>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- SECCIÓN 2: INSTRUMENTOS -->
-      <div class="section">
+      <!-- SECCIÓN 2: NOTIFICACIONES -->
+      <div class="section" id="notificaciones">
         <div class="section-header" onclick="toggleSection(this)">
-          <span>2. Instrumentos</span>
+          <span class="section-header-left">
+            <img src="images/notificaciones.svg" alt="" />
+            <span>2. Notificaciones</span>
+          </span>
           <span class="section-icon">▼</span>
         </div>
         <div class="section-content">
+          <p class="section-intro">
+            El módulo de Notificaciones centraliza alertas operativas. Un punto
+            rojo en el ícono del menú indica que hay mensajes sin leer.
+          </p>
+
+          <div class="subsection">
+            <div class="subsection-header" onclick="toggleSubsection(this)">
+              <span class="subsection-title">Tipos de alerta habituales</span>
+              <span class="subsection-icon">▼</span>
+            </div>
+            <div class="subsection-content">
+              <ul>
+                <li>
+                  <strong>Cliente desconocido:</strong> una transacción
+                  referencia un cliente que aún no está dado de alta. Al hacer
+                  clic puede redirigirlo a <strong>Clientes</strong> para
+                  crearlo o corregirlo.
+                </li>
+                <li>
+                  <strong>Instrumentos incompletos:</strong> faltan datos
+                  (tipo BCU, composición, país, etc.). Al seleccionar la
+                  notificación puede abrir el editor del instrumento.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="subsection">
+            <div class="subsection-header" onclick="toggleSubsection(this)">
+              <span class="subsection-title">Marcar como leída</span>
+              <span class="subsection-icon">▼</span>
+            </div>
+            <div class="subsection-content">
+              <p>
+                Desde la lista puede marcar cada notificación como leída. El
+                contador de no leídas se actualiza de forma automática (también
+                se refresca en segundo plano mientras usa la aplicación).
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECCIÓN 3: CLIENTES -->
+      <div class="section" id="clientes">
+        <div class="section-header" onclick="toggleSection(this)">
+          <span class="section-header-left">
+            <img src="images/clientes.svg" alt="" />
+            <span>3. Clientes</span>
+          </span>
+          <span class="section-icon">▼</span>
+        </div>
+        <div class="section-content">
+          <p class="section-intro">
+            En <strong>Clientes</strong> gestiona el padrón de clientes, sus
+            datos regulatorios y las cuentas en custodios/brokers. La vista
+            superior muestra el total de clientes y la cantidad de
+            <em>perfiles de riesgo no alineados</em>.
+          </p>
+
+          <figure class="screenshot">
+            <img
+              src="images/01-clientes-list.png"
+              alt="Listado de clientes en SIGA"
+            />
+            <figcaption>
+              Listado de clientes con tabla filtrable y botón «Añadir Cliente».
+            </figcaption>
+          </figure>
+
+          <div class="subsection">
+            <div class="subsection-header" onclick="toggleSubsection(this)">
+              <span class="subsection-title">Alta de un cliente</span>
+              <span class="subsection-icon">▼</span>
+            </div>
+            <div class="subsection-content">
+              <ol class="steps">
+                <li>
+                  Pulse <strong>Añadir Cliente</strong> en la esquina superior
+                  derecha de la tabla.
+                </li>
+                <li>
+                  Complete los campos del formulario (estado, nombre, asesor,
+                  tipo de persona, residencia, servicio, etc.).
+                </li>
+                <li>
+                  Asigne al menos una cuenta de banco/broker en la sección
+                  <strong>Bancos</strong>.
+                </li>
+                <li>Guarde. El sistema genera el código de cliente con el prefijo BCU configurado.</li>
+              </ol>
+
+              <table class="field-table">
+                <thead>
+                  <tr>
+                    <th>Campo</th>
+                    <th>Descripción</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Estado</td>
+                    <td>Abierto o Cerrado</td>
+                  </tr>
+                  <tr>
+                    <td>Tipo de persona</td>
+                    <td>Física o Jurídica</td>
+                  </tr>
+                  <tr>
+                    <td>Tipo persona jurídica</td>
+                    <td>
+                      Sociedad Comercial, Vehículos o Fondo de Terceros (solo
+                      si aplica)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Residente</td>
+                    <td>Residente, No Residente o Fondo de Terceros</td>
+                  </tr>
+                  <tr>
+                    <td>Servicio</td>
+                    <td>
+                      Referenciamiento, Asesoramiento, Canalización de Órdenes,
+                      Gestión Discrecional, Gestión de Fondos de Inversión u
+                      Otros
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>PEP / Fondos propios / Vinculados</td>
+                    <td>Indicadores Sí/No según normativa</td>
+                  </tr>
+                  <tr>
+                    <td>Objetivo</td>
+                    <td>
+                      Objetivo de inversión asociado al perfil de riesgo
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Bancos / Brokers</td>
+                    <td>
+                      Cuentas por custodio; se muestran con el nombre completo
+                      del broker
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="screenshot-grid">
+                <figure class="screenshot">
+                  <img
+                    src="images/02-create-client-dialog-brokers-section.png"
+                    alt="Formulario de alta de cliente con sección de brokers"
+                  />
+                  <figcaption>
+                    Formulario de alta: sección de brokers y cuentas.
+                  </figcaption>
+                </figure>
+                <figure class="screenshot">
+                  <img
+                    src="images/05-banks-dialog-lombard-odier-full-name.png"
+                    alt="Diálogo de bancos con nombre completo del broker"
+                  />
+                  <figcaption>
+                    Diálogo de bancos: cada custodio se identifica con su
+                    nombre completo.
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <div class="subsection">
+            <div class="subsection-header" onclick="toggleSubsection(this)">
+              <span class="subsection-title">Edición y detalle</span>
+              <span class="subsection-icon">▼</span>
+            </div>
+            <div class="subsection-content">
+              <ul>
+                <li>
+                  Seleccione una fila de la tabla para ver el panel de detalle
+                  (cuentas, servicio, tipo de persona, PEP, residencia, etc.).
+                </li>
+                <li>
+                  Use el ícono de edición de la fila para abrir el mismo
+                  formulario en modo edición.
+                </li>
+                <li>
+                  En la sección de bancos puede ver el listado de cuentas
+                  existentes y agregar nuevas.
+                </li>
+              </ul>
+              <figure class="screenshot">
+                <img
+                  src="images/04-edit-client-dialog-brokers-ver-listado.png"
+                  alt="Edición de cliente con listado de brokers"
+                />
+                <figcaption>
+                  Edición de cliente: acceso al listado de cuentas por broker.
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="subsection">
+            <div class="subsection-header" onclick="toggleSubsection(this)">
+              <span class="subsection-title">Filtros de la tabla</span>
+              <span class="subsection-icon">▼</span>
+            </div>
+            <div class="subsection-content">
+              <p>
+                Cada columna con filtro permite buscar o seleccionar valores
+                (código, nombre, estado, bancos, etc.). Combine filtros de
+                varias columnas para acotar el listado. Los clientes en estado
+                <strong>Abierto</strong> se muestran primero.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECCIÓN 4: INSTRUMENTOS -->
+      <div class="section" id="instrumentos">
+        <div class="section-header" onclick="toggleSection(this)">
+          <span class="section-header-left">
+            <img src="images/instrumentos.svg" alt="" />
+            <span>4. Instrumentos</span>
+          </span>
+          <span class="section-icon">▼</span>
+        </div>
+        <div class="section-content">
+          <p class="section-intro">
+            El catálogo de <strong>Instrumentos</strong> concentra los valores
+            negociados (ISIN/CUSIP), su clasificación BCU, la composición por
+            clase de activo y los flags necesarios para los reportes.
+          </p>
+
+          <div class="subsection">
+            <div class="subsection-header" onclick="toggleSubsection(this)">
+              <span class="subsection-title">Filtros rápidos (contadores)</span>
+              <span class="subsection-icon">▼</span>
+            </div>
+            <div class="subsection-content">
+              <p>
+                En la parte superior de la pantalla hay contadores que actúan
+                como filtros. Haga clic en uno para filtrar la tabla; use
+                <strong>Borrar filtro</strong> para volver a ver todos.
+              </p>
+              <ul>
+                <li>
+                  <strong>Sin País:</strong> instrumentos sin país emisor
+                  definido.
+                </li>
+                <li>
+                  <strong>Sin Tipo:</strong> sin código de tipo BCU
+                  (<code>bcu_code</code>).
+                </li>
+                <li>
+                  <strong>Sin Comp:</strong> sin composición de activos (cash,
+                  bonos, acciones, etc.).
+                </li>
+              </ul>
+              <div class="highlight-box">
+                <strong>Tip:</strong> puede combinar estos filtros globales con
+                los filtros por columna de la tabla.
+              </div>
+            </div>
+          </div>
+
           <div class="subsection">
             <div class="subsection-header" onclick="toggleSubsection(this)">
               <span class="subsection-title">Activado Reporte</span>
@@ -88,368 +470,420 @@
             </div>
             <div class="subsection-content">
               <p>
-                Este campo indica si el instrumento está habilitado para ser
-                incluído en el reporte trimestral del BCU. <br />En caso de que
-                algún instrumento involucrado en transacciones del trimestre no
-                esté activado, el sistema generará una alerta para el usuario.
+                El campo <strong>Activado Reporte</strong> (columna
+                <em>usar</em>) indica si el instrumento está habilitado para
+                incluirse en el reporte trimestral del BCU.
               </p>
-            </div>
-          </div>
-
-          <div class="subsection">
-            <div class="subsection-header" onclick="toggleSubsection(this)">
-              <span class="subsection-title">Filtros</span>
-              <span class="subsection-icon">▼</span>
-            </div>
-            <div class="subsection-content">
-              <p>Los filtros disponibles son:</p>
-              <ul>
-                <li>
-                  <strong>Sin Tipo</strong>: Muestra todos los instrumentos que
-                  no tengan un tipo de instrumento según la clasificación
-                  establecida por el BCU.
-                </li>
-                <li>
-                  <strong>Sin Composición</strong>: Muestra aquellos
-                  instrumentos que no tienen una composición definida (por
-                  ejemplo, fondos de inversión sin activos asignados).
-                </li>
-              </ul>
-              <div class="highlight-box">
-                <strong>Tip:</strong> Es posible combinar los filtros globales
-                con los filtros de la tabla.
-              </div>
+              <p>
+                Si existen transacciones del trimestre sobre un instrumento no
+                activado, el sistema genera alertas para el usuario. En el
+                panel de detalle del instrumento el campo aparece como
+                <strong>Activar para Reportes</strong>.
+              </p>
             </div>
           </div>
 
           <div class="subsection">
             <div class="subsection-header" onclick="toggleSubsection(this)">
               <span class="subsection-title"
-                >Actualización manual del Instrumento</span
+                >Edición y Actualizado Manual</span
               >
               <span class="subsection-icon">▼</span>
             </div>
             <div class="subsection-content">
               <p>
-                Los instrumentos que no son fondos suelen tener preasignada una
-                composición conocida. <br />
-                Sin embargo, así sean fondos para los cuales se desconoce su
-                distribución de activos o que el asesor lo desea, es posible
-                actualizar manualmente la composición del instrumento. <br />
-                Para acceder a la composición actual y modificarla, debe marcar
-                el campo "Actualizado Manual" en "Sí"
+                Seleccione un instrumento (o use un enlace directo por ISIN) y
+                abra el editor. Puede actualizar, entre otros:
               </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- SECCIÓN 3: CARTERAS INDIVIDUALES -->
-      <div class="section">
-        <div class="section-header" onclick="toggleSection(this)">
-          <span>3. Carteras Individuales</span>
-          <span class="section-icon">▼</span>
-        </div>
-        <div class="section-content">
-          <div class="subsection">
-            <div class="subsection-header" onclick="toggleSubsection(this)">
-              <span class="subsection-title">Creación de Cartera</span>
-              <span class="subsection-icon">▼</span>
-            </div>
-            <div class="subsection-content">
-              <p>Pasos para crear una cartera individual:</p>
               <ul>
-                <li>Seleccione el cliente titular de la cartera</li>
+                <li>ISIN / CUSIP, descripción, moneda</li>
+                <li>Código BCU y categoría Anexo III</li>
+                <li>País emisor</li>
                 <li>
-                  Defina el objetivo de inversión (crecimiento, renta,
-                  preservación)
+                  Composición: Cash, Bonos, Acciones, Productos estructurados,
+                  Derivados, Materias primas, Otros (y Renta Fija / Renta
+                  Variable)
                 </li>
-                <li>Establezca el horizonte temporal</li>
-                <li>Asigne el perfil de riesgo correspondiente</li>
-                <li>Configure alertas y límites de exposición</li>
+                <li>Activado para reportes</li>
+                <li>Actualizado Manual</li>
               </ul>
               <p>
-                Una vez creada, puede comenzar a agregar instrumentos a la
-                cartera.
+                Los instrumentos que no son fondos suelen tener una composición
+                preasignada. Para fondos (o cuando desee forzar la
+                distribución), active
+                <strong>Actualizado Manual = Sí</strong>. Esta opción está
+                disponible cuando el código BCU es de tipo fondo
+                (<code>FI</code> o <code>FIA</code>).
               </p>
-            </div>
-          </div>
-
-          <div class="subsection">
-            <div class="subsection-header" onclick="toggleSubsection(this)">
-              <span class="subsection-title">Composición y Balance</span>
-              <span class="subsection-icon">▼</span>
-            </div>
-            <div class="subsection-content">
-              <p>La vista de composición muestra:</p>
-              <ul>
-                <li>Distribución por tipo de activo (gráfico circular)</li>
-                <li>Ponderación de cada instrumento</li>
-                <li>Valor total de la cartera</li>
-                <li>Rentabilidad acumulada y anualizada</li>
-                <li>Comparación contra benchmark</li>
-              </ul>
-              <div class="highlight-box">
-                <strong>Importante:</strong> El sistema alertará si la cartera
-                se desvía del perfil de riesgo asignado.
+              <div class="warning-box">
+                <strong>Importante:</strong> al cambiar el ISIN el sistema pide
+                confirmación antes de guardar, porque el identificador se usa
+                para relacionar transacciones y reportes.
               </div>
             </div>
           </div>
 
           <div class="subsection">
             <div class="subsection-header" onclick="toggleSubsection(this)">
-              <span class="subsection-title">Rebalanceo</span>
+              <span class="subsection-title">Panel de composición</span>
               <span class="subsection-icon">▼</span>
             </div>
             <div class="subsection-content">
               <p>
-                El rebalanceo mantiene la cartera alineada con el perfil
-                objetivo:
+                Al seleccionar un instrumento, debajo de la tabla se muestra un
+                resumen con:
               </p>
               <ul>
-                <li>
-                  <strong>Automático:</strong> Configure reglas de rebalanceo
-                  automático por umbral o calendario
-                </li>
-                <li>
-                  <strong>Manual:</strong> Ejecute rebalanceos cuando lo
-                  considere necesario
-                </li>
-                <li>
-                  <strong>Sugerencias:</strong> El sistema propone ajustes
-                  basados en desviaciones detectadas
-                </li>
+                <li>Porcentajes por clase de activo</li>
+                <li>Renta fija / renta variable</li>
+                <li>Actualizado Manual, Anexo III, Activar para Reportes</li>
+                <li>Última fecha de composición</li>
               </ul>
-              <p>
-                El rebalanceo genera órdenes de compra/venta que deben ser
-                aprobadas antes de ejecutarse.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- SECCIÓN 4: PERFILES DE RIESGO -->
-      <div class="section">
-        <div class="section-header" onclick="toggleSection(this)">
-          <span>4. Perfiles de Riesgo</span>
-          <span class="section-icon">▼</span>
-        </div>
-        <div class="section-content">
-          <div class="subsection">
-            <div class="subsection-header" onclick="toggleSubsection(this)">
-              <span class="subsection-title">Categorías de Riesgo</span>
-              <span class="subsection-icon">▼</span>
-            </div>
-            <div class="subsection-content">
-              <p>El sistema clasifica el riesgo en cinco niveles:</p>
-              <ul>
-                <li>
-                  <strong>Conservador:</strong> Prioriza preservación de
-                  capital, baja volatilidad
-                </li>
-                <li>
-                  <strong>Moderado-Conservador:</strong> Balance hacia seguridad
-                  con crecimiento limitado
-                </li>
-                <li>
-                  <strong>Moderado:</strong> Equilibrio entre riesgo y retorno
-                </li>
-                <li>
-                  <strong>Moderado-Agresivo:</strong> Mayor exposición a renta
-                  variable
-                </li>
-                <li>
-                  <strong>Agresivo:</strong> Máximo potencial de retorno, alta
-                  volatilidad
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="subsection">
-            <div class="subsection-header" onclick="toggleSubsection(this)">
-              <span class="subsection-title">Cuestionario de Perfil</span>
-              <span class="subsection-icon">▼</span>
-            </div>
-            <div class="subsection-content">
-              <p>
-                Cada cliente debe completar el cuestionario de perfil de riesgo
-                que evalúa:
-              </p>
-              <ul>
-                <li>Experiencia previa en inversiones</li>
-                <li>Horizonte temporal de inversión</li>
-                <li>Capacidad financiera para asumir pérdidas</li>
-                <li>Tolerancia emocional a la volatilidad</li>
-                <li>Objetivos financieros personales</li>
-              </ul>
-              <div class="highlight-box">
-                <strong>Nota:</strong> El cuestionario debe actualizarse
-                anualmente o cuando cambien circunstancias del cliente.
-              </div>
-            </div>
-          </div>
-
-          <div class="subsection">
-            <div class="subsection-header" onclick="toggleSubsection(this)">
-              <span class="subsection-title">Límites y Restricciones</span>
-              <span class="subsection-icon">▼</span>
-            </div>
-            <div class="subsection-content">
-              <p>Cada perfil de riesgo tiene límites predefinidos:</p>
-              <ul>
-                <li>Porcentaje máximo en renta variable</li>
-                <li>Exposición permitida a instrumentos derivados</li>
-                <li>Concentración máxima por emisor</li>
-                <li>Restricciones por sector o geografía</li>
-              </ul>
-              <p>
-                El sistema bloqueará transacciones que violen estos límites.
-              </p>
             </div>
           </div>
         </div>
       </div>
 
       <!-- SECCIÓN 5: TRANSACCIONES -->
-      <div class="section">
+      <div class="section" id="transacciones">
         <div class="section-header" onclick="toggleSection(this)">
-          <span>5. Transacciones</span>
+          <span class="section-header-left">
+            <img src="images/transacciones.svg" alt="" />
+            <span>5. Transacciones</span>
+          </span>
           <span class="section-icon">▼</span>
         </div>
         <div class="section-content">
+          <p class="section-intro">
+            El módulo de <strong>Transacciones</strong> administra el registro
+            BCU de operaciones (compras, ventas, transferencias, ajustes). No
+            es un motor de órdenes de mercado: sirve para revisar, corregir y
+            exportar la información regulatoria.
+          </p>
+
           <div class="subsection">
             <div class="subsection-header" onclick="toggleSubsection(this)">
-              <span class="subsection-title">Tipos de Órdenes</span>
+              <span class="subsection-title">Filtros por año y trimestre</span>
               <span class="subsection-icon">▼</span>
             </div>
             <div class="subsection-content">
-              <p>Puede ejecutar los siguientes tipos de órdenes:</p>
-              <ul>
-                <li><strong>Compra:</strong> Adquisición de instrumentos</li>
+              <ol class="steps">
                 <li>
-                  <strong>Venta:</strong> Liquidación de posiciones existentes
+                  Seleccione el <strong>Año</strong> (por defecto el más
+                  reciente con datos).
                 </li>
                 <li>
-                  <strong>Orden limitada:</strong> Se ejecuta a precio
-                  específico o mejor
+                  Opcionalmente elija un <strong>Quarter</strong> (Q1–Q4) o
+                  All.
                 </li>
                 <li>
-                  <strong>Orden de mercado:</strong> Se ejecuta al precio actual
-                  disponible
+                  La tabla se filtra por la fecha de cada registro según esos
+                  criterios.
                 </li>
-                <li>
-                  <strong>Stop loss:</strong> Venta automática al alcanzar
-                  precio mínimo
-                </li>
-                <li>
-                  <strong>Take profit:</strong> Venta automática al alcanzar
-                  objetivo de ganancia
-                </li>
-              </ul>
+              </ol>
             </div>
           </div>
 
           <div class="subsection">
             <div class="subsection-header" onclick="toggleSubsection(this)">
-              <span class="subsection-title">Proceso de Ejecución</span>
+              <span class="subsection-title"
+                >Exportación del reporte trimestral BCU</span
+              >
               <span class="subsection-icon">▼</span>
             </div>
             <div class="subsection-content">
-              <p>El flujo de ejecución de transacciones incluye:</p>
-              <ul>
+              <p>
+                El BCU solicita la entrega de las transacciones del trimestre
+                en formato XML (también puede descargar una versión XLSX de
+                apoyo).
+              </p>
+              <ol class="steps">
+                <li>Seleccione un año concreto (no «All»).</li>
                 <li>
-                  <strong>1. Creación:</strong> El asesor ingresa los detalles
-                  de la orden
+                  Elija el trimestre correspondiente (recomendado para el
+                  envío regulatorio).
                 </li>
                 <li>
-                  <strong>2. Validación:</strong> El sistema verifica límites y
-                  disponibilidad
+                  Use el menú de descarga para generar
+                  <strong>XML</strong> o <strong>XLSX</strong>.
                 </li>
-                <li>
-                  <strong>3. Aprobación:</strong> Revisión por supervisor (según
-                  monto)
-                </li>
-                <li>
-                  <strong>4. Envío:</strong> La orden se enruta al mercado
-                </li>
-                <li>
-                  <strong>5. Ejecución:</strong> Confirmación de la transacción
-                </li>
-                <li>
-                  <strong>6. Liquidación:</strong> Actualización de posiciones y
-                  saldos
-                </li>
-              </ul>
+              </ol>
+              <div class="highlight-box">
+                <strong>Plazo habitual:</strong> el reporte debe generarse y
+                enviarse dentro de los primeros 10 días hábiles del mes
+                siguiente al cierre del trimestre. Verifique siempre la norma
+                vigente.
+              </div>
+              <div class="warning-box">
+                <strong>Antes de exportar:</strong> revise que los
+                instrumentos involucrados estén con
+                <em>Activado Reporte</em>, que los códigos de cliente existan y
+                que no queden campos obligatorios vacíos.
+              </div>
             </div>
           </div>
 
           <div class="subsection">
             <div class="subsection-header" onclick="toggleSubsection(this)">
-              <span class="subsection-title">Historial y Seguimiento</span>
+              <span class="subsection-title">Edición de una transacción</span>
               <span class="subsection-icon">▼</span>
             </div>
             <div class="subsection-content">
-              <p>Acceda al historial completo de transacciones:</p>
+              <p>
+                Abra el editor desde la fila correspondiente. Puede corregir
+                datos como:
+              </p>
               <ul>
-                <li>Filtros por fecha, instrumento, tipo de orden</li>
-                <li>Estado actual de órdenes pendientes</li>
-                <li>Detalles de ejecución y comisiones</li>
-                <li>Exportación a formatos CSV o Excel</li>
+                <li>Cliente / código de cliente / código beneficiario</li>
+                <li>Fecha, instrucción, intermediario, descripción</li>
+                <li>
+                  Códigos de instrumento, tipo de valor, monedas, precios y
+                  montos (cantidad, valor nominal, valor efectivo)
+                </li>
+                <li>
+                  Indicadores: oferta pública, bajo acuerdo libre,
+                  observaciones
+                </li>
+              </ul>
+              <p>
+                Al guardar, el sistema solicita confirmación. El panel inferior
+                de la pantalla resume fecha, cliente, intermediario,
+                instrucción, descripción, cantidades y valor efectivo de la
+                fila seleccionada.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECCIÓN 6: PERFILES DE RIESGO -->
+      <div class="section" id="perfiles">
+        <div class="section-header" onclick="toggleSection(this)">
+          <span class="section-header-left">
+            <img src="images/perfiles.svg" alt="" />
+            <span>6. Perfiles de Riesgo</span>
+          </span>
+          <span class="section-icon">▼</span>
+        </div>
+        <div class="section-content">
+          <p class="section-intro">
+            Este módulo muestra, por cliente, la
+            <strong>composición de la cartera</strong> a una fecha de corte y
+            la compara con los rangos de renta fija y renta variable definidos
+            en el objetivo de inversión.
+          </p>
+
+          <div class="subsection">
+            <div class="subsection-header" onclick="toggleSubsection(this)">
+              <span class="subsection-title">Vista de composición</span>
+              <span class="subsection-icon">▼</span>
+            </div>
+            <div class="subsection-content">
+              <p>La pantalla superior incluye:</p>
+              <ul>
+                <li>
+                  Gráficos de distribución (renta y clases de activo: cash,
+                  bonos, acciones, productos estructurados, derivados,
+                  materias primas, otros)
+                </li>
+                <li>
+                  Tabla de <strong>Distribución por Clase de Activo</strong>
+                  con volumen y porcentaje
+                </li>
+                <li>
+                  Rangos mínimo/máximo de renta fija y renta variable del
+                  objetivo del cliente
+                </li>
+              </ul>
+              <div class="warning-box">
+                <strong>Datos incompletos:</strong> si la suma de la
+                distribución no es 100%, el sistema indica que no se puede
+                generar el reporte para ese cliente.
+              </div>
+            </div>
+          </div>
+
+          <div class="subsection">
+            <div class="subsection-header" onclick="toggleSubsection(this)">
+              <span class="subsection-title">Fecha de corte y tabla</span>
+              <span class="subsection-icon">▼</span>
+            </div>
+            <div class="subsection-content">
+              <ol class="steps">
+                <li>
+                  Elija la fecha con el selector de calendario (hay una fecha
+                  mínima según los datos cargados).
+                </li>
+                <li>
+                  La tabla «Composición de las carteras» se recalcula con la
+                  información hasta esa fecha.
+                </li>
+                <li>
+                  Seleccione una fila de cliente para actualizar los gráficos y
+                  habilitar el reporte individual.
+                </li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="subsection">
+            <div class="subsection-header" onclick="toggleSubsection(this)">
+              <span class="subsection-title">Generar reportes</span>
+              <span class="subsection-icon">▼</span>
+            </div>
+            <div class="subsection-content">
+              <ul>
+                <li>
+                  <strong>Generar reporte:</strong> produce el reporte del
+                  cliente seleccionado (requiere datos completos).
+                </li>
+                <li>
+                  <strong>Generar reportes:</strong> genera en lote los
+                  reportes de todos los perfiles con datos completos; muestra
+                  progreso y abre la vista de impresión.
+                </li>
               </ul>
               <div class="highlight-box">
-                <strong>Tip:</strong> Use el buscador rápido con el número de
-                orden para localizar transacciones específicas.
+                <strong>Tip:</strong> use la fecha de corte alineada al cierre
+                del período que debe reportar antes de imprimir o guardar los
+                PDF.
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- SECCIÓN 6: REPORTES -->
-      <div class="section">
+      <!-- SECCIÓN 7: INFORME ANUAL -->
+      <div class="section" id="informe">
         <div class="section-header" onclick="toggleSection(this)">
-          <span>6. Reportes</span>
+          <span class="section-header-left">
+            <img src="images/informe.svg" alt="" />
+            <span>7. Informe Anual sobre servicios a clientes</span>
+          </span>
+          <span class="section-icon">▼</span>
+        </div>
+        <div class="section-content">
+          <p class="section-intro">
+            El <strong>Informe Anual</strong> consolida la composición de
+            carteras y la información de servicios/transacciones exigida por la
+            regulación (Anexos III, V y VII). Puede no estar visible en todos
+            los entornos.
+          </p>
+
+          <div class="subsection">
+            <div class="subsection-header" onclick="toggleSubsection(this)">
+              <span class="subsection-title">Cómo calcular el informe</span>
+              <span class="subsection-icon">▼</span>
+            </div>
+            <div class="subsection-content">
+              <ol class="steps">
+                <li>
+                  Seleccione la fecha de referencia con el calendario.
+                </li>
+                <li>
+                  Pulse <strong>Calcular valores</strong>. Las tablas se
+                  cargan a partir de esa fecha.
+                </li>
+                <li>
+                  Revise cada anexo y los indicadores de cumplimiento /
+                  datos incompletos.
+                </li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="subsection">
+            <div class="subsection-header" onclick="toggleSubsection(this)">
+              <span class="subsection-title">Secciones del informe</span>
+              <span class="subsection-icon">▼</span>
+            </div>
+            <div class="subsection-content">
+              <ul>
+                <li>
+                  <strong>Anexo III:</strong> composición de carteras y
+                  métricas por categoría de servicio y producto.
+                </li>
+                <li>
+                  <strong>Anexo V:</strong> custodios e intermediarios
+                  (clientes y valores por custodio).
+                </li>
+                <li>
+                  <strong>Anexo VII — Gestión Discrecional:</strong>
+                  distribución de clientes, geografía y productos para ese
+                  servicio.
+                </li>
+                <li>
+                  <strong>Anexo VII — Canalización de Órdenes:</strong>
+                  mismo esquema para canalización.
+                </li>
+                <li>
+                  <strong>Anexo VII — Asesoramiento:</strong> información de
+                  clientes bajo servicio de asesoramiento.
+                </li>
+              </ul>
+              <div class="highlight-box">
+                <strong>Nota:</strong> cada sección puede marcar cumplimiento
+                o datos incompletos según las validaciones del sistema. Corrija
+                clientes, instrumentos o posiciones antes de presentar el
+                informe.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECCIÓN 8: OTROS -->
+      <div class="section" id="otros">
+        <div class="section-header" onclick="toggleSection(this)">
+          <span class="section-header-left">
+            <img src="images/asesor.svg" alt="" />
+            <span>8. Otros módulos y soporte</span>
+          </span>
           <span class="section-icon">▼</span>
         </div>
         <div class="section-content">
           <div class="subsection">
             <div class="subsection-header" onclick="toggleSubsection(this)">
-              <span class="subsection-title">Tipos de Reportes</span>
+              <span class="subsection-title">Asesor y Carteras Individuales</span>
               <span class="subsection-icon">▼</span>
             </div>
             <div class="subsection-content">
-              <p>El sistema genera diversos reportes:</p>
+              <p>
+                Los módulos <strong>Asesor</strong> y
+                <strong>Carteras Individuales</strong> pueden aparecer en el
+                menú según la configuración del entorno. En las versiones
+                actuales pueden estar en evolución o deshabilitados. Si los
+                necesita y no están disponibles, contacte a soporte.
+              </p>
+            </div>
+          </div>
+
+          <div class="subsection">
+            <div class="subsection-header" onclick="toggleSubsection(this)">
+              <span class="subsection-title">Buenas prácticas regulatorias</span>
+              <span class="subsection-icon">▼</span>
+            </div>
+            <div class="subsection-content">
               <ul>
                 <li>
-                  <strong>Reporte trimestral de transacciones:</strong><br />
-                  El BCU solicita la entrega en formato XML de todas las
-                  transacciones realizadas en el trimestre, incluyendo compras,
-                  ventas, transferencias y ajustes.<br />
-                  Este reporte debe ser generado y enviado dentro de los
-                  primeros 10 días hábiles del mes siguiente al cierre del
-                  trimestre.<br />Se genera en la pestaña
-                  <strong>"Transacciones"</strong>.
+                  Mantenga actualizados los clientes (códigos BCU, servicio,
+                  bancos/brokers).
                 </li>
                 <li>
-                  <strong>Perfiles de Riesgo:</strong><br />
-                  Información detallada sobre la distribución de los activos de
-                  cada cartera y su cumplimiento con el perfil de riesgo
-                  asignado.<br />
-                  Se genera en la pestaña <strong>"Perfiles de Riesgo"</strong>.
+                  Complete tipo BCU, país y composición de cada instrumento
+                  usado en el trimestre.
                 </li>
                 <li>
-                  <strong>Informe Anual:</strong><br />
-                  Reporte sobre los servicios ofrecidos a los clientes. El mismo
-                  enlista la composición de las carteras en su totalidad,
-                  desglozando en las secciones <strong>"Anexo III"</strong>,
-                  <strong>"Anexo V"</strong> y
-                  <strong>"Anexo VII"</strong>.<br />
-                  Anexo VII contiene tres subcategorías: "Gestión Discrecional",
-                  "Canalización de Órdenes" y "Asesoramiento".<br />
-                  Cada sección incluye el cumplimiento o inclumplimiento de las
-                  distintas totalidades.
+                  Active para reporte solo instrumentos que deben incluirse en
+                  el XML del BCU.
+                </li>
+                <li>
+                  Antes del cierre trimestral, revise notificaciones y filtros
+                  «Sin Tipo / Sin Comp / Sin País».
+                </li>
+                <li>
+                  Genere el XML de Transacciones y valide el contenido antes del
+                  envío al regulador.
                 </li>
               </ul>
             </div>
@@ -457,42 +891,15 @@
 
           <div class="subsection">
             <div class="subsection-header" onclick="toggleSubsection(this)">
-              <span class="subsection-title">Reportes Personalizados</span>
+              <span class="subsection-title">Ayuda dentro de la app</span>
               <span class="subsection-icon">▼</span>
             </div>
             <div class="subsection-content">
-              <p>Cree reportes a medida según sus necesidades:</p>
-              <ul>
-                <li>Seleccione campos y métricas específicas</li>
-                <li>Aplique filtros avanzados</li>
-                <li>Configure agrupaciones y ordenamiento</li>
-                <li>Agregue gráficos y visualizaciones</li>
-                <li>Guarde plantillas para uso futuro</li>
-              </ul>
-              <div class="highlight-box">
-                <strong>Nota:</strong> Los reportes personalizados pueden
-                compartirse con otros usuarios del equipo.
-              </div>
-            </div>
-          </div>
-
-          <div class="subsection">
-            <div class="subsection-header" onclick="toggleSubsection(this)">
-              <span class="subsection-title">Automatización y Alertas</span>
-              <span class="subsection-icon">▼</span>
-            </div>
-            <div class="subsection-content">
-              <p>Configure la generación automática de reportes:</p>
-              <ul>
-                <li>Frecuencia: diaria, semanal, mensual, trimestral</li>
-                <li>Destinatarios: seleccione usuarios o grupos</li>
-                <li>
-                  Condiciones: genere solo cuando se cumplan ciertos criterios
-                </li>
-                <li>
-                  Alertas: reciba notificaciones sobre eventos importantes
-                </li>
-              </ul>
+              <p>
+                El ítem <strong>Ayuda</strong> del menú lateral carga esta
+                misma guía en un panel interno. Puede abrirla en cualquier
+                momento sin salir de la sesión.
+              </p>
             </div>
           </div>
         </div>
@@ -501,23 +908,14 @@
 
     <div class="footer">
       <div class="footer-content">
-        <h3>Soporte Técnico</h3>
+        <h3>Soporte técnico</h3>
         <p>
-          ¿Necesita ayuda adicional? Nuestro equipo está disponible para
-          asistirle.
-        </p>
-        <div class="footer-divider"></div>
-        <p>
-          <a href="mailto:soporte@reportgenerator.com"
-            >soporte@siga-solutions.com.uy</a
-          >
+          ¿Necesita ayuda adicional? Contacte a su administrador o al equipo
+          de Siga Solutions.
         </p>
         <div class="footer-divider"></div>
         <p style="font-size: 0.9rem; opacity: 0.8">
-          © 2025 SIGA. Todos los derechos reservados.
-        </p>
-        <p style="font-size: 0.85rem; opacity: 0.7">
-          Versión del sistema: 1.0.0
+          © 2026 SIGA Solutions. Todos los derechos reservados.
         </p>
       </div>
     </div>
@@ -526,62 +924,91 @@
       function toggleSection(header) {
         const content = header.nextElementSibling;
         const icon = header.querySelector(".section-icon");
+        const isOpen = content.classList.contains("open");
 
-        if (content.classList.contains("open")) {
+        if (isOpen) {
           content.classList.remove("open");
           icon.classList.remove("open");
+          header.setAttribute("aria-expanded", "false");
         } else {
           content.classList.add("open");
           icon.classList.add("open");
+          header.setAttribute("aria-expanded", "true");
         }
       }
 
       function toggleSubsection(header) {
         const content = header.nextElementSibling;
         const icon = header.querySelector(".subsection-icon");
+        const isOpen = content.classList.contains("open");
 
-        if (content.classList.contains("open")) {
+        if (isOpen) {
           content.classList.remove("open");
           icon.classList.remove("open");
+          header.setAttribute("aria-expanded", "false");
         } else {
           content.classList.add("open");
           icon.classList.add("open");
+          header.setAttribute("aria-expanded", "true");
         }
       }
 
-      // Optional: Add keyboard navigation
+      function openSectionById(id) {
+        const section = document.getElementById(id);
+        if (!section) return;
+        const header = section.querySelector(".section-header");
+        const content = section.querySelector(".section-content");
+        const icon = section.querySelector(".section-icon");
+        if (content && !content.classList.contains("open")) {
+          content.classList.add("open");
+          if (icon) icon.classList.add("open");
+          if (header) header.setAttribute("aria-expanded", "true");
+        }
+        section.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
       document.addEventListener("keydown", function (e) {
-        if (e.target.classList.contains("subsection-header")) {
+        if (
+          e.target.classList.contains("subsection-header") ||
+          e.target.classList.contains("section-header")
+        ) {
           if (e.key === "Enter" || e.key === " ") {
             e.preventDefault();
-            toggleSubsection(e.target);
+            if (e.target.classList.contains("section-header")) {
+              toggleSection(e.target);
+            } else {
+              toggleSubsection(e.target);
+            }
           }
         }
       });
 
-      // Make section headers keyboard accessible
       document.querySelectorAll(".section-header").forEach((header) => {
         header.setAttribute("tabindex", "0");
         header.setAttribute("role", "button");
         header.setAttribute("aria-expanded", "false");
-
-        header.addEventListener("click", function () {
-          const isOpen = this.nextElementSibling.classList.contains("open");
-          this.setAttribute("aria-expanded", isOpen ? "true" : "false");
-        });
       });
 
-      // Make subsection headers keyboard accessible
       document.querySelectorAll(".subsection-header").forEach((header) => {
         header.setAttribute("tabindex", "0");
         header.setAttribute("role", "button");
         header.setAttribute("aria-expanded", "false");
+      });
 
-        header.addEventListener("click", function () {
-          const isOpen = this.nextElementSibling.classList.contains("open");
-          this.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      document.querySelectorAll(".toc-item").forEach((link) => {
+        link.addEventListener("click", function (e) {
+          const href = this.getAttribute("href");
+          if (href && href.startsWith("#")) {
+            e.preventDefault();
+            openSectionById(href.slice(1));
+          }
         });
       });
+
+      // Open section from hash on load
+      if (window.location.hash) {
+        openSectionById(window.location.hash.slice(1));
+      }
     </script>
   </body>
 </html>

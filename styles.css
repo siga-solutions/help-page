@@ -9,7 +9,7 @@ body {
   background-color: #f5f5f5;
   color: #333;
   line-height: 1.6;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
 .header {
@@ -30,10 +30,61 @@ body {
   opacity: 0.9;
 }
 
+.header .meta {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
 .container {
   max-width: 1200px;
   margin: 2rem auto;
   padding: 0 1rem;
+}
+
+/* Table of contents */
+.toc {
+  background-color: white;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.toc h2 {
+  color: #105281;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.toc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0.75rem;
+}
+
+.toc-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #105281;
+  font-weight: 600;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.toc-item:hover {
+  background-color: #f0f7fb;
+  border-color: #4a90b8;
+}
+
+.toc-item img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
 }
 
 .section {
@@ -42,6 +93,7 @@ body {
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  scroll-margin-top: 1rem;
 }
 
 .section-header {
@@ -56,15 +108,30 @@ body {
   align-items: center;
   transition: background-color 0.3s ease;
   user-select: none;
+  gap: 1rem;
 }
 
 .section-header:hover {
   background-color: #3a7a9e;
 }
 
+.section-header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.section-header-left img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
 .section-icon {
   font-size: 1.35rem;
   transition: transform 0.3s ease;
+  flex-shrink: 0;
 }
 
 .section-icon.open {
@@ -79,6 +146,11 @@ body {
 .section-content.open {
   display: block;
   animation: slideDown 0.3s ease;
+}
+
+.section-intro {
+  margin-bottom: 1.25rem;
+  color: #333;
 }
 
 .subsection {
@@ -146,7 +218,8 @@ body {
   color: #333;
 }
 
-.subsection-content ul {
+.subsection-content ul,
+.subsection-content ol {
   margin-left: 2rem;
   margin-bottom: 1rem;
 }
@@ -168,6 +241,107 @@ body {
   border-left: 4px solid #105281;
   padding: 1rem;
   margin: 1rem 0;
+}
+
+.warning-box {
+  background-color: #fff8e6;
+  border-left: 4px solid #d4a017;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.steps {
+  counter-reset: step;
+  list-style: none;
+  margin-left: 0 !important;
+}
+
+.steps li {
+  position: relative;
+  padding-left: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.steps li::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+  background-color: #105281;
+  color: white;
+  border-radius: 50%;
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.75rem;
+  text-align: center;
+}
+
+/* Screenshots */
+.screenshot {
+  margin: 1.25rem 0;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fafafa;
+}
+
+.screenshot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 480px;
+  object-fit: contain;
+  background: #fff;
+}
+
+.screenshot figcaption {
+  padding: 0.75rem 1rem;
+  font-size: 0.85rem;
+  color: #555;
+  background: #f5f5f5;
+  border-top: 1px solid #e0e0e0;
+}
+
+.screenshot-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.25rem 0;
+}
+
+.screenshot-grid .screenshot {
+  margin: 0;
+}
+
+.field-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.field-table th,
+.field-table td {
+  border: 1px solid #e0e0e0;
+  padding: 0.65rem 0.85rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.field-table th {
+  background-color: #f0f7fb;
+  color: #105281;
+  font-weight: 600;
+}
+
+.field-table tr:nth-child(even) td {
+  background-color: #fafafa;
 }
 
 .footer {
@@ -219,5 +393,13 @@ body {
 
   .container {
     padding: 0 0.5rem;
+  }
+
+  .screenshot-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .toc-grid {
+    grid-template-columns: 1fr;
   }
 }
